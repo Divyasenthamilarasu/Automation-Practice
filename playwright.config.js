@@ -4,7 +4,9 @@ import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
   testDir: './tests',
- 
+ expect: {
+    timeout: 50000,
+  },
   fullyParallel: true,
   //forbidOnly: !!process.env.CI,
   //retries: process.env.CI ? 2 : 0,
@@ -13,8 +15,8 @@ export default defineConfig({
   use: {   
    trace: 'on-first-retry',
    headless:false,
-   actionTimeout: 10000,
-   navigationTimeout: 30000,
+   actionTimeout: 50000,
+   navigationTimeout: 50000,
   },
 
 

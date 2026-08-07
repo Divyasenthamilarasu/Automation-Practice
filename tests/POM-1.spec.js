@@ -14,7 +14,7 @@ let tableValue='0';
 let cell='Dwayne';
 
 
-test.only('validating End-to-end page',async({page})=>
+test('validating End-to-end page',async({page})=>
 {
 await page.goto("https://rahulshettyacademy.com/AutomationPractice/");
 page.waitForLoadState('domcontentloaded')
