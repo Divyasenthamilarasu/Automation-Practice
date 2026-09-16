@@ -39,7 +39,8 @@ test('Newtab',async({page})=>
 {
     await page.goto("https://rahulshettyacademy.com/AutomationPractice/");
     page.waitForLoadState('domcontentloaded')
-    const [newTab]= await Promise.all([page.context().waitForEvent('page'),page.locator('#opentab').click()]);
+    const [newTab]= await Promise.all([page.context().waitForEvent('page'),
+      page.locator('#opentab').click()]);
    await newTab.waitForLoadState();
    console.log(await newTab.url());
    await newTab.close();
