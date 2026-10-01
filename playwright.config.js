@@ -13,10 +13,11 @@ export default defineConfig({
   //workers: process.env.CI ? 1 : undefined,
   reporter: 'html',
   use: {   
-   trace: 'on-first-retry',
+   trace: 'on',
    headless:false,
    actionTimeout: 50000,
    navigationTimeout: 50000,
+   screenshot: 'on',
   },
 
 

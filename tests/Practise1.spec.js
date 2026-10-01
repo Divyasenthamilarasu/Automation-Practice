@@ -119,7 +119,7 @@ console.log(await page.locator('.totalAmount').textContent());
 })
 
 //Reload functionality
-test('reload functionality', async ({ page }) => {
+test('reload Functionality', async ({ page }) => {
 await page.goto('https://rahulshettyacademy.com/AutomationPractice/');
 
 await page.locator('#mousehover').hover();
